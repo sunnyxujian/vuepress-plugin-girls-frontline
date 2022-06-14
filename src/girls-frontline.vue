@@ -15,13 +15,17 @@
 </style>
 
 <template>
-  <div class="girls-frontline-container" v-show="isLoaded" ref="container">
+  <div
+    v-show="isLoaded"
+    ref="container"
+    class="girls-frontline-container"
+  >
     <canvas
       id="vuepress-girls-frontline"
       :width="style.width"
       :height="style.height"
       class="live2d"
-    ></canvas>
+    />
   </div>
 </template>
 
@@ -30,8 +34,8 @@ import live2dJSString from './live2d'
 import models from './models'
 
 export default {
-  name: 'girls-frontline',
-  data() {
+  name: 'GirlsFrontline',
+  data () {
     return {
       isLoaded: true,
       model: {},
@@ -41,20 +45,19 @@ export default {
       },
     }
   },
-  created() {
-    console.log(OPTIONS)
+  created () {
     if (OPTIONS.minixModels) {
-      this.model = { ...OPTIONS.models, ...minixModels }
+      this.model = { ...models, ...OPTIONS.minixModels }
     } else {
       this.model = models
     }
   },
-  mounted() {
-    this.initCat()
+  mounted () {
+    this.initModel()
 
     this.$router.afterEach((to, from) => {
       if (to.path !== from.path) {
-        this.initCat()
+        this.initModel()
       }
     })
     if (OPTIONS.right) {
@@ -65,13 +68,11 @@ export default {
     }
   },
   methods: {
-    initCat() {
+    initModel () {
       const isMobile =
-        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        !!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
           navigator.userAgent
         )
-          ? true
-          : false
       if (isMobile) {
         this.isLoaded = false
         return console.log('mobile do not load model')
@@ -95,15 +96,13 @@ export default {
       }
 
       setTimeout(() => {
-        window.loadlive2d('vuepress-girls-frontline', this.getRandomModel())
+        window.loadlive2d('vuepress-girls-frontline', this.getRandomModel(),)
       })
     },
-    getRandomModel() {
+    getRandomModel () {
       const modelsKey = Object.keys(this.model)
-      console.log(modelsKey)
       // 如果传入了 model 就一直采用固定的model
-      if (OPTIONS.model && modelsKey.includes(OPTIONS.model))
-        return OPTIONS.model
+      if (OPTIONS.model && modelsKey.includes(OPTIONS.model)) { return OPTIONS.model }
       // 否则就随机模型
       const idx = Math.floor(Math.random() * modelsKey.length)
       const model = this.model[modelsKey[idx]] || ''

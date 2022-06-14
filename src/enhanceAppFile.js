@@ -1,4 +1,4 @@
-import GirlsFrontline from "./girls-frontline.vue";
+import GirlsFrontline from './girls-frontline.vue'
 export default ({ Vue }) => {
-  Vue.component("GirlsFrontline", GirlsFrontline);
-};
+  Vue.component('GirlsFrontline', GirlsFrontline)
+}
