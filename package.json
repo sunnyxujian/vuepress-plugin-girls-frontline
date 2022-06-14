@@ -1,0 +1,50 @@
+{
+  "name": "vuepress-plugin-girls-frontline",
+  "version": "1.1.7",
+  "description": "girls frontline plugin for VuePress",
+  "main": "src/index.js",
+  "author": "xujian",
+  "license": "MIT",
+  "keywords": [
+    "vuepress",
+    "plugin",
+    "girls",
+    "models",
+    "lsp"
+  ],
+  "homepage": "https://github.com/sunnyxujian/vuepress-plugin-girls-frontline",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:sunnyxujian/vuepress-plugin-girls-frontline.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sunnyxujian/vuepress-plugin-girls-frontline/issues"
+  },
+  "scripts": {
+    "dev": "vuepress dev dev --temp .temp",
+    "build": "vuepress build dev --dest dist --temp .temp",
+    "lint": "eslint --fix --ext .js,.vue ."
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,vue}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-vuepress": "^0.0.2",
+    "husky": "^2.4.0",
+    "lint-staged": "^8.2.0",
+    "vuepress": "^1.0.0"
+  },
+  "peerDependencies": {
+    "vuepress": "^1.0.0"
+  }
+}
