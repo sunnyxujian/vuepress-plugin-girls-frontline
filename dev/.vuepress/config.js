@@ -1,24 +1,24 @@
 module.exports = {
-  title: "vuepress-plugin-girls-frontline",
-  base: "/vuepress-plugin-girls-frontline/",
+  title: 'vuepress-plugin-girls-frontline',
+  base: '/vuepress-plugin-girls-frontline/',
   plugins: [
     [
-      require("../../src"),
+      require('../../src'),
       {
-          width: 300,
-          height: 500,
-          model: "",
-          right: 20,
-          bottom: 20
+        width: 380,
+        height: 600,
+        model: '',
+        right: 10,
+        bottom: 10,
       },
     ],
   ],
   themeConfig: {
     nav: [
       {
-        text: "GitHub",
-        link: "https://github.com/sunnyxujian/vuepress-plugin-girls-frontline",
+        text: 'GitHub',
+        link: 'https://github.com/sunnyxujian/vuepress-plugin-girls-frontline',
       },
     ],
   },
-};
+}

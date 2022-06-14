@@ -1,6 +1,6 @@
 # vuepress-plugin-girls-frontline
 
-这个插件会让你的VuePress网站上的右下方展示前线少女的模型。
+这个插件会让你的VuePress网站上的右下方展示**前线少女**。
 
 ## Get start
 ### 安装插件
