@@ -7,6 +7,7 @@
 }
 .girls-frontline-container #vuepress-girls-frontline {
   position: absolute;
+  opacity: 0.9;
   right: 0px;
   bottom: 0px;
   z-index: 99999;
