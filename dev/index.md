@@ -37,6 +37,7 @@ module.exports = {
 | right       | `number` | 0                                          | 距离右边页面的距离,单位`px`            |
 | bottom      | `number` | 0                                          | 距离下边页面的距离,单位`px`            |
 | model       | `string` | '--'                                       | 固定展示的模型，可用模型详情如下models |
+| pageSwitch  | `boolean` | `false`                                    | 切换页面时是否切换模型                 |
 
 # Models
 下面是所有随机的模型

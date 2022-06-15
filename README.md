@@ -27,14 +27,15 @@ module.exports = {
 
 
 ## options
-| 配置项      | 类型     | 默认值                                     | 说明                                   |
-| :---------- | :------- | :----------------------------------------- | :------------------------------------- |
-| width       | `number` | `(150 / 1300) * document.body.clientWidth` | 模型的宽度                             |
-| height      | `number` | `(150 / 800) * document.body.clientWidth`  | 模型的高度                             |
-| minixModels | `Oject`  | `{}` 例如`{模型名: 模型的json资源地址}`    | 要混入的模型对象                       |
-| right       | `number` | 0                                          | 距离右边页面的距离,单位`px`            |
-| bottom      | `number` | 0                                          | 距离下边页面的距离,单位`px`            |
-| model       | `string` | '--'                                       | 固定展示的模型，可用模型详情如下models |
+| 配置项      | 类型      | 默认值                                     | 说明                                   |
+| :---------- | :-------- | :----------------------------------------- | :------------------------------------- |
+| width       | `number`  | `(150 / 1300) * document.body.clientWidth` | 模型的宽度                             |
+| height      | `number`  | `(150 / 800) * document.body.clientWidth`  | 模型的高度                             |
+| minixModels | `Oject`   | `{}` 例如`{模型名: 模型的json资源地址}`    | 要混入的模型对象                       |
+| right       | `number`  | 0                                          | 距离右边页面的距离,单位`px`            |
+| bottom      | `number`  | 0                                          | 距离下边页面的距离,单位`px`            |
+| model       | `string`  | '--'                                       | 固定展示的模型，可用模型详情如下models |
+| pageSwitch  | `boolean` | `false`                                    | 切换页面时是否切换模型                 |
 
 # Models
 

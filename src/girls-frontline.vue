@@ -56,7 +56,7 @@ export default {
     this.initModel()
 
     this.$router.afterEach((to, from) => {
-      if (to.path !== from.path) {
+      if (to.path !== from.path && OPTIONS.pageSwitch) {
         this.initModel()
       }
     })
